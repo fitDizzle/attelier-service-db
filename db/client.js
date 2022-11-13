@@ -12,9 +12,12 @@ async function run() {
     console.log('connecting');
     await client.db(source).command({ ping: 1 });
     console.log('successfully connected to db');
-  } finally {
-    await client.close();
+  } catch (err) {
+    console.log(err);
   }
+  //finally {
+  //await client.close();
+  //}
 }
 
 run().catch(console.dir);
