@@ -11,7 +11,9 @@ async function run() {
     await client.connect();
     console.log('connecting');
     await client.db(source).command({ ping: 1 });
+    let products = await client.db(source).collection('products').find({}).toArray();
     console.log('successfully connected to db');
+    console.log(products);
   } catch (err) {
     console.log(err);
   }
