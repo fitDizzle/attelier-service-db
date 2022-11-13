@@ -1,0 +1,15 @@
+{
+  "name": "sdc-db",
+  "version": "1.0.0",
+  "description": "DB for Product Services",
+  "main": "index.js",
+  "scripts": {
+    "db": "node db/client.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mark Clark",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^4.11.0"
+  }
+}
